@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  .link {
+    @include link;
+  }
+  .services {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: $breakpoint-1) {
+    .products,
+    .services {
+      display: none;
+    }
+  }
+  .right-side {
+    display: flex;
+    align-items: center;
+    .icons {
+      display: flex;
+      align-items: center;
+      svg {
+        height: 25px;
+        width: 25px;
+        margin-left: 20px;
+      }
+    }
+    .menu_hamburguer {
+      margin-left: 15px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 20px;
+      background: transparent;
+      cursor: pointer;
+      span {
+        display: inline-block;
+        width: 20px;
+        height: 3px;
+        background: $color2;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 20px;
+          height: 3px;
+          background: $color2;
+        }
+        &::before {
+          margin-top: -8px;
+        }
+        &::after {
+          margin-top: 8px;
+        }
+      }
+    }
+    @media (max-width: $breakpoint-1) {
+      .menu_hamburguer {
+        display: flex;
+      }
+    }
+  }
+}

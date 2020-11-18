@@ -1,0 +1,55 @@
+.intro {
+  padding-top: 4.392386530014641vw;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: url('https://images.samsung.com/is/image/samsung/assets/br/home/kv4_144x640_pc_07102020.png?$ORIGIN_PNG$')
+    no-repeat center center;
+  background-size: cover;
+  height: 43.92386530014641vw;
+  .monitor {
+    position: absolute;
+    top: 40%;
+    left: 50vw;
+    width: 100vw;
+    h1 {
+      font-size: 3.513909224011713vw;
+    }
+    p {
+      margin-top: 1.4641288433382138vw;
+      font-size: 1.171303074670571vw;
+    }
+    button {
+      margin-top: 2.9282576866764276vw;
+      @include link-2;
+      font-size: 1.171303074670571vw;
+    }
+  }
+  @media (max-width: $breakpoint-2) {
+    background: url('https://images.samsung.com/is/image/samsung/assets/br/home/kv4_720x1080_mo_07102020.png?$ORIGIN_PNG$')
+      no-repeat center center;
+    background-size: cover;
+    height: 160vw;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .monitor {
+      display: block;
+      position: initial;
+      padding-right: 24px;
+      h1 {
+        font-size: 8.33333333vw;
+      }
+      p {
+        font-size: 5vw;
+        line-height: 3;
+      }
+      button {
+        font-size: 4vw;
+        padding: 10px 20px;
+      }
+    }
+  }
+}

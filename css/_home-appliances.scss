@@ -1,0 +1,94 @@
+.home-appliances {
+  margin-top: 2.9282576866764276vw;
+  height: 58.565153733528554vw;
+  background: url('https://images.samsung.com/is/image/samsung/assets/br/p6_gro1/p6_initial_home/FamilyHub_PC_1440x810v2.jpg?$1440_810_JPG$')
+    center center no-repeat;
+  background-size: cover;
+
+  .home-appliances__title--1 {
+    text-align: center;
+    @include title-1($color1);
+    padding-top: 3.6603221083455346vw;
+    color: $color1;
+  }
+  .home-appliances__options {
+    margin-top: 1.4641288433382138vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.9282576866764276vw;
+    .family,
+    .quickdrive {
+      @include link-3($color1);
+      background: transparent;
+    }
+  }
+  .home-appliances__title--2 {
+    padding-top: 35.13909224011713vw;
+    text-align: center;
+    @include title-2($color1);
+    color: $color1;
+  }
+  .home-appliances__text {
+    text-align: center;
+
+    color: $color1;
+  }
+  .home-appliances__info {
+    text-align: center;
+    padding-top: 0.36603221083455345vw;
+    margin-bottom: 5.856515373352855vw;
+    a {
+      @include link-3($color1);
+      display: inline-block;
+      margin-right: 1.4641288433382138vw;
+    }
+    button {
+      @include link-2;
+      background: $color1;
+      color: $color2;
+    }
+  }
+}
+@media (max-width: $breakpoint-2) {
+  .home-appliances {
+    height: 178vw;
+    background: url('../img/home_appliances.webp') center center no-repeat;
+    background-size: cover;
+    .home-appliances__title--1 {
+      text-align: center;
+      @include title-1-mobile($color1);
+    }
+    .home-appliances__options {
+      .family,
+      .quickdrive {
+        @include link-3-mobile($color1);
+      }
+    }
+    .home-appliances__title--2 {
+      padding-top: 100vw;
+      @include title-2-mobile($color1);
+      color: $color1;
+    }
+    .home-appliances__info {
+      text-align: center;
+      padding-top: 2vw;
+      margin-bottom: 5.856515373352855vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+      a {
+        @include link-3-mobile($color1);
+        display: inline-block;
+        margin-top: 4vw;
+      }
+      button {
+        @include link-2-mobile;
+        background: $color1;
+        color: $color2;
+      }
+    }
+  }
+}
